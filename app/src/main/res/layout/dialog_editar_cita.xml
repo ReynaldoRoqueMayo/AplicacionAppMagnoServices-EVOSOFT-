@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical">
+
+
+            <CalendarView
+                android:id="@+id/calendarViewEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                >
+
+            </CalendarView>
+
+            <com.google.android.material.textview.MaterialTextView="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione Local"
+                android:padding="20dp"
+
+                app:boxCornerRadiusTopEnd="20dp"
+                app:startIconDrawable="@drawable/ic_baseline_add_location_24"
+
+                >
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvHorarioSeleccEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione Hora"
+                android:padding="15dp"
+
+                app:boxCornerRadiusTopEnd="20dp"
+                app:startIconDrawable="@drawable/ic_baseline_access_time_24">
+
+                <AutoCompleteTextView
+
+                    android:id="@+id/acHoraEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+
+                    >                android:id="@+id/tvServicioSelectEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="20dp"
+                android:text="Eliga Servicio"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+                app:boxCornerRadiusTopEnd="20dp"
+                app:startIconDrawable="@drawable/ic_baseline_car_repair_24">
+
+                <AutoCompleteTextView
+
+                    android:id="@+id/acServicioEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+
+                    >
+
+                </AutoCompleteTextView>
+
+
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="20dp"
+                android:text="Añada Descripcion"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+
+
+                >
+
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                app:counterMaxLength="100"
+                app:helperTextEnabled="true"
+                app:helperText="*Opcional"
+                app:startIconDrawable="@drawable/ic_baseline_description_24"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="#002BFF"
+        >
+
+        <Button            android:textAllCaps="false"
+            android:layout_marginRight="15dp"
+            android:text="Cancelar"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

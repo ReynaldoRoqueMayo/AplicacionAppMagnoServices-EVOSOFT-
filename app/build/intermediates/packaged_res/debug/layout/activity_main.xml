@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity=""
+    tools:context=".MainActivity"
+    android:background="@drawable/fondo_login"
+    android:padding="10dp"
+    android:backgroundTintMode="src_over"
+    android:backgroundTint="#99454BC5"
+
+
+    >
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/magnopng"
+
+        />
+
+
+    <TextView
+
+
+        android:id="@+id/tvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLogo"
+        android:fontFamily="@font/holtwood_one_sc"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="9"
+        android:text="Iniciar Sesion"
+        android:layout_marginTop="3dp"
+        android:textColor="#ea1b20"
+        android:textSize="25dp"
+
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLogin"
+        android:id="@+id/tInpLLoginUser"
+        android:layout_marginTop="20dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        app:startIconTint="@color/black"
+        android:textColorHint="@color/white"
+
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUsuarioIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DNI/RUC"
+            android:maxLines="1"
+            android:textColor="@color/white"  />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/tInpPass"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tInpLLoginUser"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+
+        app:endIconMode="password_toggle"
+        app:endIconTint="#000000"
+        app:boxStrokeColor="@color/white"
+
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:startIconTint="@color/black"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:hint="Contraseña"
+            android:textColor="@color/white"
+
+            android:textColorLink="#02D3ED" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvOlvide"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+
+        android:layout_below="@id/tInpPass"
+        android:layout_alignRight="@id/tInpPass"
+        android:layout_marginTop="22dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="sans-serif-black"
+
+        android:text="Olvidé mi contraseña"
+        android:textColor="#FFFFFF"
+        android:textColorLink="@color/teal_200"
+        android:textSize="15dp"
+        android:textStyle="italic|bold"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnIngresar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvOlvide"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+
+        android:text="Ingresar"
+        app:cornerRadius="150dp">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCrearCuenta"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnIngresar"
+        android:layout_marginTop="20dp"
+        android:text="Crear cuenta"
+        app:cornerRadius="150dp"
+        >
+
+    </com.google.android.material.button.MaterialButton>
+
+
+
+
+</RelativeLayout>

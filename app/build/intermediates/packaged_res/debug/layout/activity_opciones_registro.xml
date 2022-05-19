@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OpcionesRegistro"
+    android:background="@color/purple_700"
+
+    >
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tituloOpcionesRegistro"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="35dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="¿Cómo desea registrarse en la app de MAGNO MOTOR SERVICES?">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <LinearLayout
+        android:id="@+id/linLVertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tituloOpcionesRegistro"
+        android:background="@drawable/rounded_edge"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+
+
+        >
+
+        <ImageView
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_horizontal_rule_24"
+
+            >
+
+
+        </ImageView>
+
+
+        <RadioGroup
+            android:id="@+id/radGroupOpciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            >
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+
+                android:id="@+id/rbtnPersona"
+
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Persona"
+                android:textColor="@color/black"
+
+                >
+
+            </com.google.android.material.radiobutton.MaterialRadioButton>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+
+                android:id="@+id/rbtnEmpresa"
+
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+
+
+                android:text="Empresa">
+
+            </com.google.android.material.radiobutton.MaterialRadioButton>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center_horizontal|bottom"
+            android:text="¿Necesita ayuda?"
+            android:textColor="@color/purple_500"
+            android:textIsSelectable="true">
+
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOpcionesCancelar"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Cancelar">
+
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOcionesContinuar"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Continuar">
+
+
+            </com.google.android.material.button.MaterialButton>
+
+
+        </LinearLayout>
+
+        <TextView
+
+            android:id="@+id/snkBar"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+
+            >
+
+        </TextView>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

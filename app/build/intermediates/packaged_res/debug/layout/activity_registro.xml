@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity"
+    android:background="@color/purple_700"
+
+    >
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTittleRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+
+
+        android:text="Crear Usuario"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold">
+
+    </com.google.android.material.textview.MaterialTextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layoVertical"
+        android:layout_below="@id/tvTittleRegister"
+        android:background="@drawable/rounded_edge"
+
+
+        >
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgCrearUsuario"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/alex_img"
+
+                app:shapeAppearanceOverlay="@style/ivRound">
+
+
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addImgRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignRight="@id/imgCrearUsuario"
+                android:layout_marginTop="-30dp"
+                android:clickable="true"
+
+
+                android:src="@drawable/baseline_add_black_48dp"
+                app:elevation="4dp"
+                app:fabSize="mini"
+                app:layout_anchor="@id/imgCrearUsuario"
+                app:layout_anchorGravity="bottom|end" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inpRUC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:hint="RUC"
+            android:visibility="gone">
+
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inpRazonSocial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:hint="Razón Social"
+            android:visibility="gone">
+
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="3dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:maxLines="1"
+                android:id="@+id/edtNombreRegistro"
+                android:hint="Nombre">
+
+
+            </com.google.android.material.textfield.TextInputEditText>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellido"
+                android:maxLines="1"
+                android:id="@+id/edtApellidoRegistro"
+                android:layout_weight="0.5"
+                >
+
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCorreoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:hint="Correo"
+            android:maxLines="1"
+            ></com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:hint="Contraseña"
+            android:maxLines="1"
+            >
+
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:hint="Celular"
+            android:id="@+id/edtCelularRegistro"
+            android:maxLines="1"
+
+            >
+
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:hint="DNI"
+            android:id="@+id/edtDniRegistro"
+            android:maxLines="1">
+
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/btnCancelarRegistro"
+                android:text="Cancelar">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/btnContinuarRegisro"
+                android:text="Continuar">
+
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

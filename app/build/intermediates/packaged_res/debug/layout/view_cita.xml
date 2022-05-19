@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+
+    >
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+
+        app:cardCornerRadius="20dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="200dp"
+
+            android:background="@drawable/round_bk2"
+
+           android:backgroundTint="@color/black"
+
+            android:backgroundTintMode="add"
+            android:orientation="horizontal"
+
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/baloo"
+                        android:text="Servicio: "
+                        android:textStyle="bold"
+
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvServicioItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="servicio muestra"
+                        >
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:text="Sucursal: "
+                        android:textColor="@color/black"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvSucursalItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="sucursal muestra"
+
+                        android:textColor="@color/black"
+                        >
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:text="Fecha Cita: "
+                        android:textColor="@color/black"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvFechaCitaItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="fecha ejm"
+                        android:textColor="@color/black"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/baloo"
+                        android:text="Hora Cita: "
+                        android:textColor="@color/black"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvHoraCitaItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hora"
+                        android:textColor="@color/black"
+                        >
+
+                    </TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:text="Estado: "
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvEstadoItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="estado muestra"
+                        android:drawableRight="@drawable/ic_baseline_circle_24"
+                        android:drawableTint="#00C853"
+                        android:textColor="@color/black"
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:text="Fecha de Creacion: "
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvFechaCreacionItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="fecha creacion muestra"
+                        android:textColor="@color/black"
+                        >
+
+                    </TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:orientation="vertical"
+                android:elevation="25dp"
+
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editar"
+                    android:textStyle="italic"
+                    android:textAllCaps="false"
+                    android:layout_gravity="end"
+                    app:cornerRadius="50dp"
+                    android:shadowRadius="50"
+                    android:elevation="10dp"
+                    android:id="@+id/btnEditarCitaItem"
+                    android:stateListAnimator="@null"
+
+                    >
+
+
+                </com.google.android.material.button.MaterialButton>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anular"
+                    app:cornerRadius="50dp"
+                    android:id="@+id/btnAnularItem"
+                    android:layout_gravity="end"
+                    android:textAllCaps="false"
+                    android:elevation="50dp"
+                    android:textStyle="italic"
+                    android:stateListAnimator="@null"
+                    >
+
+
+                </com.google.android.material.button.MaterialButton>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

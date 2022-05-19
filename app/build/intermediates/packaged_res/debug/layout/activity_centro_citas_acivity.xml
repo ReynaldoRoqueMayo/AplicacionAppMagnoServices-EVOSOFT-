@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CentroCitasAcivity">
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvTittleCitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="RESERVA CITAS"
+                android:textColor="@color/purple_700"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+
+            </TextView>
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                >
+
+            </CalendarView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvLocalSelecc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="20dp"
+                android:text="Eliga Local"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold">
+
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfLayLocal"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione Local"
+                android:padding="20dp"
+
+                app:boxCornerRadiusTopEnd="20dp"
+                app:startIconDrawable="@drawable/ic_baseline_add_location_24"
+
+                >
+
+                <AutoCompleteTextView
+
+                    android:id="@+id/acLocal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+
+
+                    >
+
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvHorarioSelecc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="20dp"
+                android:text="Eliga Hora"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione Hora"
+                android:padding="15dp"
+
+                app:boxCornerRadiusTopEnd="20dp"
+                app:startIconDrawable="@drawable/ic_baseline_access_time_24">
+
+                <AutoCompleteTextView
+
+                    android:id="@+id/acHora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+
+                    >
+
+                </AutoCompleteTextView>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvServicioSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="20dp"
+                android:text="Eliga Servicio"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione Servicio"
+                android:padding="15dp"
+
+                app:boxCornerRadiusTopEnd="20dp"
+                app:startIconDrawable="@drawable/ic_baseline_car_repair_24">
+
+                <AutoCompleteTextView
+
+                    android:id="@+id/acServicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+
+                    >
+
+                </AutoCompleteTextView>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDescripcionEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="20dp"
+                android:text="Añada Descripcion"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+
+
+                >
+
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:hint="Ingrese Descripcion"
+                app:endIconMode="clear_text"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:helperTextEnabled="true"
+                app:helperText="*Opcional"
+                app:startIconDrawable="@drawable/ic_baseline_description_24"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtDescripcion"
+                    android:maxLength="100"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRealizarCita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Aceptar"
+                android:textStyle="bold">
+
+
+            </com.google.android.material.button.MaterialButton>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

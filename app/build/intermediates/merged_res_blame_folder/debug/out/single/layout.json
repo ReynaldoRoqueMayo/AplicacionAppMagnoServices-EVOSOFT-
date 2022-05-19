@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_principal.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\activity_principal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_opciones_cita.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\activity_opciones_cita.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_citas_admin.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\activity_citas_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main_admin.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\activity_main_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_opciones_registro.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\activity_opciones_registro.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_centro_citas_acivity.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\activity_centro_citas_acivity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_mis_citas.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\activity_mis_citas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_registro.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\activity_registro.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_editar_cita.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\dialog_editar_cita.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\view_cita.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\view_cita.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\opcion_item.xml",
+        "source": "C:\\Users\\Alex\\AndroidStudioProjects\\AppMagnoServices\\app\\src\\main\\res\\layout\\opcion_item.xml"
+    }
+]

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity=""
+    tools:context=".MainActivity"
+
+
+    >
+
+
+    <TextView
+
+
+        android:id="@+id/tvLogin"
+        android:layout_width="match_parent"
+        android:textSize="25dp"
+
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLogin"
+        android:id="@+id/tInpLLoginUser"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUsuarioIngresar"
+            android:layout_width="match_parent"
+            android:layou_height="wrap_content"
+            android:hint="DNI/RUC"
+            android:maxLines="1"
+            android:textColor="@color/white"  />
+    </com.google.android.merial.textfield.TextInpLayout>
+        android:id="@+id/tInpPass"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tInpLLoginUser"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/white"
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:hint="Contraseña"
+            android:textColor="@color/white"
+
+            android:textColorLink="#02D3ED" />
+    <TextView
+        android:id="@+id/tvOlvide"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+
+        android:layout_below="@id/tInpPass"
+        android:layout_alignRight="@id/tInpPass"
+        android:layout_marginTop="22dp"
+        android:clickable="true"
+
+        />
+
+    <com.google.ndroid.material.button.MaterialButton
+        android:id="@+id/bnIngresar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        androidlayout_below="@id/tvOlvide"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+
+        android:text="Ingresar"
+        app:cornerRadius="150dp">
+        android:id="@+id/btnCrearCuenta"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnIngresar"
+        android:layout_marginTop="20dp"
+        android:text="Crear cuenta"
+        app:cornerRadius="150dp"
+        >
+
+    </com.google.androi.material.button.MaterialButton>
+
+
+
+
+</AbosluteLayout>

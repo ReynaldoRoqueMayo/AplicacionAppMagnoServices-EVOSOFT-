@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrincipalActivity"
+
+            <com.google.android.material.button.MaterialButton
+
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"            android:insetBottom="0dp"
+            android:text="SOS"
+            android:layout_margin="5dp"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            app:cornerRadius="@android:dimen/app_icon_size"
+
+
+            >
+
+        </com.google.android.material.button.MaterialButton>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/alex_img"
+            android:layout_gravity="center"
+            app:shapeAppearanceOverlay="@style/ivRound">
+
+
+        </com.google.android.material.imageview.ShapeableImageView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addImgPrincipal"
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+
+        android:id="@+id/tvNombreUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cordLayo"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/chicle"
+        android:gravity="center"
+        android:text="Nombre Apellido"
+        
+    </com.google.android.material.textview.MaterialTextView>
+
+
+
+     <com.google.android.material.textfield.TextInputLayout
+         android:id="@+id/menu"
+         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+         "
+         android:hint="Placa">
+
+         <AutoCompleteTextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:inputType="none"
+         />
+
+     </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"/rounded_edge"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/btnPrincipalCitas"
+
+            android:layout_marginTop="50dp"
+            android:width="350dp"
+
+            android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+
+            android:text="Centro de Citas"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+
+            >
+            android:layout_marginTop="5dp"
+            android:width="350dp"
+
+            android:drawableLeft="@drawable/ic_baseline_miscellaneous_services_24"
+
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:text="Nuestros Servicios"
+            android:textAlignment="textStart"
+            android:textAllCaps="false">
+
+
+        </com.google.android.material.button.MaterialButton>
+
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:drawableLeft="@drawable/ic_baseline_stars_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:text="Tus Beneficios"
+            android:textAlignment="textStart"
+            android:textAllCaps="false">
+
+
+        </com.google.android.material.button.MaterialButton>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:drawableLeft="@drawable/ic_baseline_message_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:text="Mensajes"
+            android:textAlignment="textStart"
+            android:textAllCaps="false">
+
+
+        </com.google.android.material.button.MaterialButton>
+
+        <            android:width="350dp"
+
+            android:drawableLeft="@drawable/ic_baseline_add_location_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:text="Talleres"
+            android:textAlignment="textStart"
+            android:textAllCaps="false">
+
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            android:width="350dp"
+
+            android:drawableLeft="@drawable/ic_baseline_help_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:text="Ayuda""
+            android:textAllCaps="false">
+
+
+        </com.google.android.material.button.MaterialButton>
+
+
+    
+
+
+
+</RelativeLayout>
