@@ -8,9 +8,9 @@
 
 
     <item
-        android:id="@+id/more"
+        android:id="@+id/menuItemCerrarSesion"
         android:title="Cerrar Sesion"
-        android:icon="@drawable/ic_round_west_24"
+        android:icon="@drawable/ic_baseline_logout_24"
 
         android:contentDescription=""
         app:showAsAction="never" />
