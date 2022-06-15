@@ -24,7 +24,8 @@ public class RegistroActivity extends AppCompatActivity {
     Button btnCancelRegister,btnContinuosRegister;
     EditText edtEmail,edtPass,edtNombre,edtApellido,edtTelefono,edtDni;
 
-
+  CheckBox checkBoxProteccionDatos;
+    TextView tvProteccion;
     AwesomeValidation awesomeValidation;
     FirebaseAuth firebaseAuth;
 
@@ -39,7 +40,8 @@ public class RegistroActivity extends AppCompatActivity {
 
 ;
 
-
+  checkBoxProteccionDatos= findViewById(R.id.checkBoxProteccionDatos);
+        tvProteccion= findViewById(R.id.tvProteccionDatos);
         btnCancelRegister = findViewById(R.id.btnCancelarRegistro);
         btnContinuosRegister = findViewById(R.id.btnContinuarRegisro);
         edtEmail=findViewById(R.id.edtCorreoRegistro);
@@ -82,7 +84,27 @@ public class RegistroActivity extends AppCompatActivity {
 
             }
         );
+    checkBoxProteccionDatos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                if(checkBoxProteccionDatos.isChecked()){
+                    tvProteccion.setError(null);
+                    DialogFragment dialogPoliticaDatos = ProteccionDatosPolitica.newInstance();
+
+                    dialogPoliticaDatos.show(getSupportFragmentManager(),"tag");
+                }
+
+            }
+        });
+        tvProteccion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogFragment dialogPoliticaDatos = TerminosCondicionesFragment.newInstance();
+
+                dialogPoliticaDatos.show(getSupportFragmentManager(),"tag");
+            }
+        });
 
         btnContinuosRegister.setOnClickListener(new View.OnClickListener() {
             @Override
