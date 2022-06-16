@@ -99,3 +99,131 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#5EFFD600"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    app:layout_constraintEnd_toEndOf="parent"
+
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/cardView"
+    >
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/alex_img"
+
+        >
+
+    </ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+      >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:text="Cliente: "
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+
+                android:id="@+id/tvClienteItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cliente muestra"
+
+
+                >
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:text="Telefono: "
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+
+                android:id="@+id/tvTelefonoItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="telefono muestra"
+
+
+                >
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:text="DNI: "
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+
+                android:id="@+id/tvDniItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="telefono muestra"
+
+
+                >
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
