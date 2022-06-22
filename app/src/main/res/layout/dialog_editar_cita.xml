@@ -111,6 +111,88 @@
 
                 <com.google.
 
+ <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvMarcaAutoEdtEditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="20dp"
+                android:text="Marca del Vehiculo"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+                >
+
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:hint="Ingrese Marca"
+                app:endIconMode="clear_text"
+                android:id="@+id/tfLayMarcaEditar"
+                app:startIconDrawable="@drawable/ic_outline_directions_car_24"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/acMarcaEditar"
+                    android:maxLength="20"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvModeloEdtEditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:paddingLeft="20dp"
+                android:text="Modelo del Vehiculo"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+
+
+                >
+
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:hint="Ingrese Modelo"
+                android:id="@+id/tfLayModeloEditar"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/ic_baseline_bubble_chart_24"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/acModeloEditar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="20"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
 
     </ScrollView>

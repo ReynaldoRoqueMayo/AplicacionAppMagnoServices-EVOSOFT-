@@ -74,6 +74,9 @@ public class CitaAdapter extends RecyclerAdapter<Cita,CitaAdapter.ViewHolder> {
                 CalendarView calendarV = dialog.findViewById(R.id.calendarViewEdit);
 
                 Calendar calendario = Calendar.getInstance();
+
+   		acMarca.setText(model.getMarcaAuto());
+                acModelo.setText(model.getModeloAuto());
           
 
                 fecha=new SimpleDateFormat("dd/MM/yy").format(calendarV.getDate()).toString();
@@ -91,6 +94,77 @@ public class CitaAdapter extends RecyclerAdapter<Cita,CitaAdapter.ViewHolder> {
 
                 acServicios.setText(arrayAdapterServicios.getItem( arrayAdapterServicios.getPosition(model.getServicio())).toString(),false);
                
+
+
+
+                frStore.collection("Auto").whereEqualTo("Marca",model.getMarcaAuto()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.i("MARCA",document.getString("Marca"));
+                                idAuto=document.getId().toString();
+
+                                frStore.collection("Auto").document(idAuto).collection("Modelo").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                        if (task.isSuccessful()){
+                                            ArrayList<Modelo> modelosAut= new ArrayList<>();
+                                            for (QueryDocumentSnapshot document : task.getResult()){
+                                                Modelo modelaut=new Modelo(document.getId().toString(),document.getString("Nombre"));
+                                                modelosAut.add(modelaut);
+
+
+
+                                            }
+                                            ArrayAdapter adapterModelos = new ArrayAdapter(view.getContext(), R.layout.opcion_item,modelosAut);
+
+
+                                            acModelo.setThreshold(1);
+
+                                            acModelo.setAdapter(adapterModelos);
+                                        }
+                                    }
+                                });
+
+
+                            }
+                        } else {
+
+                        }
+                    }
+                });
+
+
+                acMarca.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                        Auto auto = (Auto) adapterView.getItemAtPosition(i);
+
+                        if (auto.seleccionado==false){
+                            acModelo.setText("");
+                        }
+
+
+                        auto.seleccionado=!auto.seleccionado;
+
+
+
+                        ArrayAdapter adapterModelos = new ArrayAdapter(view.getContext(), R.layout.opcion_item,auto.modelos);
+
+
+                        acModelo.setThreshold(1);
+
+                        acModelo.setAdapter(adapterModelos);
+
+
+
+                    }
+                });
+
+
 
                 frStore.collection("Cita").getFirestore().collectionGroup("MisCitas").addSnapshotListener(new EventListener<Snapshot>() {
                     @Override
