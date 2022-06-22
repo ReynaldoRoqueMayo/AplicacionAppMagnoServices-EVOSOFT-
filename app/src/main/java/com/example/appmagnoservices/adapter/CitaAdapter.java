@@ -37,7 +37,39 @@ public class CitaAdapter extends RecyclerAdapter<Cita,CitaAdapter.ViewHolder> {
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Cita model) {
 
+   	holder.Servicio.setText(model.getServicio());
+        holder.Sucursal.setText(model.getSucursal());
+        holder.FechaCita.setText(model.getFechaCita());
+	holder.HoraCita.setText(model.getHora());
+ 	holder.FechaCreacion.setText(model.getFechaCreacion());
 
+        holder.MarcaAuto.setText(model.getMarcaAuto());
+        holder.ModeloAuto.setText(model.getModeloAuto());
+
+
+  	holder.btnExpandable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (holder.expandableLinear.getVisibility()==View.GONE ){
+                    TransitionManager.beginDelayedTransition(holder.cardView,new AutoTransition());
+                    holder.expandableLinear.setVisibility(View.VISIBLE);
+//
+//
+//
+                 holder.btnExpandable.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_up_24);
+
+
+                }else{
+                    TransitionManager.beginDelayedTransition(holder.cardView,new AutoTransition());
+                    holder.expandableLinear.setVisibility(View.GONE);
+                    holder.btnExpandable.setBackgroundResource(R.drawable.ic_baseline_arrow_drop_down_24);
+
+
+
+                }
+            }
+        });
 
 
         holder.btnEditar.setOnClickListener(new View.OnClickListener() {
@@ -550,9 +582,12 @@ public class CitaAdapter extends RecyclerAdapter<Cita,CitaAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView Servicio,Sucursal,FechaCita,HoraCita,Estado,FechaCreacion;
+        TextView Servicio,Sucursal,FechaCita,HoraCita,Estado,FechaCreacion,
+		 Cliente,Telefono,Dni,MarcaAuto,ModeloAuto;
         Button btnEditar,btnAnular;
-
+        LinearLayout expandableLinear;
+        ImageButton btnExpandable;
+        CardView cardView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -563,7 +598,17 @@ public class CitaAdapter extends RecyclerAdapter<Cita,CitaAdapter.ViewHolder> {
             HoraCita=itemView.findViewById(R.id.tvHoraCitaItem);
             Estado=itemView.findViewById(R.id.tvEstadoItem);
             FechaCreacion=itemView.findViewById(R.id.tvFechaCreacionItem);
+	    btnEditar = itemView.findViewById(R.id.btnEditarCitaItem);
  
+	    expandableLinear = itemView.findViewById(R.id.expandableView);
+            btnExpandable= itemView.findViewById(R.id.btnExpandable);
+            cardView= itemView.findViewById(R.id.cardView);
+
+            Cliente=itemView.findViewById(R.id.tvClienteItem);
+            Telefono=itemView.findViewById(R.id.tvTelefonoItem);
+            Dni=itemView.findViewById(R.id.tvDniItem);
+            MarcaAuto=itemView.findViewById(R.id.tvMarcaAutoItem);
+            ModeloAuto=itemView.findViewById(R.id.tvModeloAutoItem);
 
 
 
