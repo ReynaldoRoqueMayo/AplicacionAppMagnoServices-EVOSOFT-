@@ -34,7 +34,28 @@ public class RegistroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+        CheckBox checkBoxPoliticas;
 
+        TextView tvPoliticas;
+    
+        CheckBox checkBoxProteccionDatos;
+        TextView tvProteccion;
+    
+    
+    
+    
+       String email = edtEmail.getText().toString();
+                    String pass  =edtPass.getText().toString();
+    
+                    String telefono = edtTelefono.getText().toString();
+                    String dni = edtDni.getText().toString();
+    
+    
+                    if(!checkBoxPoliticas.isChecked()) {
+    
+    
+    
+                        tvPoliticas.setError("Se requiere aceptar los terminos de uso");
 
 
 ;
