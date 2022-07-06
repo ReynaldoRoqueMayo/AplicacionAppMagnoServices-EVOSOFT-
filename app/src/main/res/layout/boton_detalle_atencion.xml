@@ -1,0 +1,23 @@
+ <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnVerDetalleAtencionItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:backgroundTint="#AA00FF"
+                        android:visibility="gone"
+                        android:shadowRadius="5"
+
+                        app:strokeColor="@color/black"
+                        android:padding="8dp"
+
+                        android:stateListAnimator="@null"
+
+                        android:text="Detalle Atención"
+                        android:textAllCaps="false"
+                        android:textStyle="italic"
+                        app:cornerRadius="50dp"
+
+                        >
+
+
+                    </com.google.android.material.button.MaterialButton>
