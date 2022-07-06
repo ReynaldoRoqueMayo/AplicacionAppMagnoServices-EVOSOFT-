@@ -74,7 +74,57 @@ public class CitaAdapter extends RecyclerAdapter<Cita,CitaAdapter.ViewHolder> {
                 CalendarView calendarV = dialog.findViewById(R.id.calendarViewEdit);
 
                 Calendar calendario = Calendar.getInstance();
+
+		 if(model.getEstado().toString().equals("ATENDIDO")){
+
+         	   //cambiar visibilidad boton y color al circulo del estado
+         	   holder.btnEditar.setVisibility(View.GONE);
+          	  holder.btnDetalleAtencion.setVisibility(View.VISIBLE);
+          	  for (Drawable drawable : holder.Estado.getCompoundDrawables()) {
+          	      if (drawable != null) {
+                    drawable.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(holder.Estado.getContext(), R.color.Orange), PorterDuff.Mode.SRC_IN));
+            	    }
+           	 }
+       		 }
+
+		holder.btnDetalleAtencion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AlertDialog.Builder dialogDetalleRealizado=new AlertDialog.Builder(view.getContext());
+
+
+                View viewDetalleRealizado= inflater.inflate(R.layout.detalle_cita_realizado_dialog,null);
+
+
+                dialogDetalleRealizado.setView(viewDetalleRealizado);
+                AlertDialog detalleRealizadoDialog= dialogDetalleRealizado.create();
+
+                Button btnOkDetalleDialog= viewDetalleRealizado.findViewById(R.id.btnOkDetalleAtencion);
+                TextView tvResonsable = viewDetalleRealizado.findViewById(R.id.tvDetalleAtencionResponsable);
+                TextView tvDescripcionRealizado = viewDetalleRealizado.findViewById(R.id.tvDetalleAtencionDescripcion);
+                TextView tvFechaRealizado = viewDetalleRealizado.findViewById(R.id.tvDetalleAtencionFecha);
+
+                tvResonsable.setText(model.getResponsableAtencion());
+                tvDescripcionRealizado.setText(model.getDescripcionAtencion());
+                tvFechaRealizado.setText(model.getFechaAtencionConcluida());
+
+                btnOkDetalleDialog.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        detalleRealizadoDialog.dismiss();
+                    }
+                });
+
+                detalleRealizadoDialog.show();
+
+            }
+        });
+
           
+
+
+
 
                 fecha=new SimpleDateFormat("dd/MM/yy").format(calendarV.getDate()).toString();
 
@@ -477,7 +527,7 @@ public class CitaAdapter extends RecyclerAdapter<Cita,CitaAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView Servicio,Sucursal,FechaCita,HoraCita,Estado,FechaCreacion;
-        Button btnEditar,btnAnular;
+        Button btnEditar,btnAnularbtn,DetalleAtencion;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -491,6 +541,7 @@ public class CitaAdapter extends RecyclerAdapter<Cita,CitaAdapter.ViewHolder> {
             FechaCreacion=itemView.findViewById(R.id.tvFechaCreacionItem);
  
 
+	    btnDetalleAtencion= itemView.findViewById(R.id.btnVerDetalleAtencionItem);
 
 
 

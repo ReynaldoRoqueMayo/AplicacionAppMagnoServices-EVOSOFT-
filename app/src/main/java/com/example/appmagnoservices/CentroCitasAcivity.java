@@ -34,10 +34,17 @@ public class CentroCitasAcivity extends AppCompatActivity {
     CalendarView calendarView;
     Button btnCompleteCita;
     String fecha;
+   AutoCompleteTextView acMarca;
+    AutoCompleteTextView acModelo;
+
 
 
     Calendar calendario ;
     FirebaseAuth firebaseAuth;
+    
+    AutoCompleteTextView acMarca;
+    AutoCompleteTextView acModelo;
+
 
     private ArrayList<Local> locales;
     private ArrayList<String> opcionesHorarios;
@@ -63,16 +70,20 @@ public class CentroCitasAcivity extends AppCompatActivity {
 
         frCitas= new ArrayList<>();
 
-        inpEdtDescripcion = findViewById(R.id.edtDescripcion);
-
+     
         autoCompleteLocales = findViewById(R.id.acLocal);
-        
+        autoCompleteHorarios = findViewById(R.id.acHora);
         autoCompleteServicios = findViewById(R.id.acServicio);
         btnCompleteCita = findViewById(R.id.btnRealizarCita);
 
+        acMarca  = findViewById(R.id.acMarca);
+        acModelo = findViewById(R.id.acModelo);
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        
+            ArrayAdapter adapterMarcas = new ArrayAdapter(this,R.layout.opcion_item,autos);
+        acMarca.setThreshold(1);
+        acMarca.setAdapter(adapterMarcas);
+
 
 
 
@@ -113,6 +124,55 @@ public class CentroCitasAcivity extends AppCompatActivity {
             }
         });
 
+
+
+
+        frStore.collection("Auto").addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+
+                if (error!=null){
+
+                    return;
+                }
+
+
+                for (QueryDocumentSnapshot doc: value){
+
+                    if (doc.getString("Marca")!=null){
+
+
+                        Auto auto  = new Auto(doc.getString("Marca"),doc.getId().toString());
+
+                        frStore.collection("Auto").document(auto.id).collection("Modelo").addSnapshotListener(new EventListener<QuerySnapshot>() {
+                            @Override
+                            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+
+                                if (error!=null){
+
+                                    return;
+                                }
+
+                                ArrayList<Modelo> modelos = new ArrayList<>();
+                                for (QueryDocumentSnapshot doc : value){
+
+                                    Modelo modelo = new Modelo(doc.getId().toString(), doc.getString("Nombre"));
+                                    modelos.add(modelo);
+
+                                }
+                                auto.setModelos(modelos);
+
+
+
+                            }
+                        });
+
+                        autos.add(auto);
+                    }
+
+                }
+            }
+        });
 
 
 
