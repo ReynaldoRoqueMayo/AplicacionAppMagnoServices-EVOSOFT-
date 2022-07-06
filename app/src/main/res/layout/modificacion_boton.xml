@@ -1,0 +1,17 @@
+ <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anular"
+                        app:cornerRadius="50dp"
+                        android:id="@+id/btnAnularItem"
+                        android:layout_gravity="end"
+                        android:textAllCaps="false"
+                        
+                        android:backgroundTint="#C11111"
+                     
+                        android:textStyle="italic"
+                        android:stateListAnimator="@null"
+                        >
+
+
+                    </com.google.android.material.button.MaterialButton>
